@@ -1,0 +1,38 @@
+{
+  "dataset": "scikit-learn Iris",
+  "records": 150,
+  "reference_data": "80% training split",
+  "current_data": "20% test split with simulated feature shifts",
+  "drift_test": "Two-sample Kolmogorov-Smirnov test",
+  "alpha": 0.05,
+  "accuracy": 0.9333333333333333,
+  "weighted_f1_score": 0.9333333333333333,
+  "drifted_features": [
+    "sepal length (cm)",
+    "petal length (cm)"
+  ],
+  "feature_results": {
+    "sepal length (cm)": {
+      "ks_statistic": 0.3833333333333333,
+      "p_value": 0.0012949375507176797,
+      "drift_detected": true
+    },
+    "sepal width (cm)": {
+      "ks_statistic": 0.18333333333333332,
+      "p_value": 0.37034540433706226,
+      "drift_detected": false
+    },
+    "petal length (cm)": {
+      "ks_statistic": 0.3666666666666667,
+      "p_value": 0.0024440246589026073,
+      "drift_detected": true
+    },
+    "petal width (cm)": {
+      "ks_statistic": 0.09166666666666665,
+      "p_value": 0.9823387214430702,
+      "drift_detected": false
+    }
+  },
+  "overall_drift_detected": true,
+  "note": "Drift is simulated for this educational demonstration."
+}
